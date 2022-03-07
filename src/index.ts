@@ -1,9 +1,18 @@
 import "./scrollbar"
 import "./index.css"
-// const keyup$ = fromEvent(document, "keyup")
-// // const keyKode$ = keyup$.pipe(map((event: KeyboardEvent) => event.code))
-// // const keyKodeWithPluck$ = keyup$.pipe(pluck("code"))
+import { from, reduce, interval, take, scan, map } from "rxjs"
 
-// const pressed$ = keyup$.pipe(mapTo("Key Pressed"))
+const user = [
+  { name: "John Doe", loggedIn: false, token: null },
+  { name: "Natali", loggedIn: false, token: null },
+  { name: "Abli", loggedIn: false, token: null },
+  { name: "Sabina", loggedIn: true, token: "alala" },
+]
 
-// pressed$.subscribe(console.log)
+const observer = { next: console.log, complete: () => console.log("complete") }
+
+const state$ = from(user).pipe(scan((acc, curr) => ({ ...acc, ...curr }), {}))
+
+const name$ = state$.pipe(map((state) => state.name))
+
+name$.subscribe(console.log)
