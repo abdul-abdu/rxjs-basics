@@ -1,0 +1,10 @@
+h1 {
+  color: rgba(2, 63, 63, 0.746);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  height: 4px;
+  background: rgb(51, 95, 153);
+}
