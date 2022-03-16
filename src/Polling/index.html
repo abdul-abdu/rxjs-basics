@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Polling</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        Start polling to request random
+        <a href="https://random.dog">dog</a> images
+      </p>
+
+      <span>Polling status</span>
+      <p id="polling-status">Stopped</p>
+      <button id="start">Start polling</button>
+      <button id="stop">Stop polling</button>
+
+      <img
+        src="https://random.dog/2d394360-33e1-4c27-9e64-d65a2ab82d5b.jpg"
+        alt="dog"
+        id="dog"
+      />
+    </div>
+
+    <script src="./index.ts" type="module"></script>
+  </body>
+</html>

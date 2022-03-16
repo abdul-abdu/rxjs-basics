@@ -1,6 +1,7 @@
 {
   "name": "rxjs-basics",
   "version": "1.0.0",
+  "proxy": "https://random.dog",
   "description": "",
   "main": "index.js",
   "scripts": {

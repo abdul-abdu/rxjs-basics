@@ -1,0 +1,21 @@
+button {
+  /* border: 1px solid grey; */
+  padding: 10px;
+}
+
+#app {
+  align-items: center;
+}
+
+#start,
+#stop {
+  color: white;
+}
+
+#start {
+  background: rgb(0, 199, 0);
+}
+
+#stop {
+  background: red;
+}

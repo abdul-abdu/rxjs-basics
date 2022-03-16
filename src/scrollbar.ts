@@ -5,6 +5,7 @@ const calculateScrollPercent = (e: Element): number => {
   return (scrollTop / (scrollHeight - clientHeight)) * 100
 }
 
+
 // elements
 const progressBar = document.querySelector(".progress-bar")
 
