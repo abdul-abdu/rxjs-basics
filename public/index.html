@@ -8,37 +8,6 @@
 
     <title>RxJS Basics</title>
   </head>
-  <script>
-    window.inovia =
-      window.inovia ||
-      function () {
-        ;(inovia.q = inovia.q || []).push(arguments)
-      }
-    window.inovia("set", {
-      baseHost: "ilxbig19.inoviaai.se",
-      title: "Dev server chat",
-      emphasizeMessages: [
-        {
-          sv_SE: "Hej, behöver du hjälp? Bara fråga mig!",
-        },
-        {
-          sv_SE: "Hej, behöver du hjälp?",
-        },
-      ],
-      defaultLocale: "sv_SE",
-      emphasizeDelay: 1000,
-      emphasizeDisappear: 3000,
-      initialGreetingMessage: "hej",
-      isRecorderEnabled: true,
-    })
-  </script>
-  <script
-    async
-    defer
-    id="inovia-script"
-    src="https://aiva-stage.inoviaai.se/static/chat.min.js"
-    data-public-key="ZGV2LXNlcnZlci1iNjAyZDU5OjZhMWM1NDhiLTNlYjItNDUwZS05MGJjLTk4ZGQ1ZDFlYWVjNg=="
-  ></script>
 
   <body>
     <a href="../src//Polling/index.html">Polling soulution</a>
@@ -47,5 +16,11 @@
     <div id="message"></div>
     <div id="input"></div>
     <div class="progress-bar"></div>
+    <audio
+      id="tttt"
+      src="https://ilxgpu1000.inoviaai.se/api/v2/tts/en/?text=Hello how are you"
+    ></audio>
   </body>
+  <script>
+  </script>
 </html>

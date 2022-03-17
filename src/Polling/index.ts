@@ -23,14 +23,17 @@ const stopClick$ = fromEvent(stopBtn, "click")
 startClick$
   .pipe(
     mergeMapTo(
-      timer(0, 1000).pipe(
-        tap(() => (pollingStatus.innerHTML = "Active")),
+      timer(0, 300).pipe(
+        tap(() => {
+          pollingStatus.innerHTML = "Active"
+        }),
         switchMapTo(
           ajax.getJSON("https://random.dog/woof.json", {
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
           }),
         ),
-        takeUntil(stopClick$),
+        catchError((e) => empty()),
+        // takeUntil(stopClick$),
         finalize(() => (pollingStatus.innerHTML = "Stopped")),
       ),
     ),

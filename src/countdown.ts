@@ -1,6 +1,4 @@
-import { filter, interval, mapTo, scan, takeWhile, tap } from "rxjs"
-
-console.log("Countdown")
+import { interval, mapTo, scan, takeWhile, tap } from "rxjs"
 
 const counter$ = interval(1000)
 const countdown = document.getElementById("countdown")
@@ -12,7 +10,6 @@ counter$
     scan((accumulator, current) => {
       return accumulator + current
     }, 10),
-    tap((v) => console.log("befor", v)),
     takeWhile((n) => n >= 0),
   )
   .subscribe((v) => {
