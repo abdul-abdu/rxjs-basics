@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MortgageCalculator</title>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <label for="loanLength">Mortgage Length</label>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <h5>Mortgage amount</h5>
+        <input type="number" name="" id="loanAmount" />
+      </div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <h5>Interest rate(%)</h5>
+        <input type="text" name="" id="interest" />
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          name="loanLength"
+          id=""
+          value="180"
+          class="loanLength"
+        />
+        15yr
+        <input
+          type="radio"
+          name="loanLength"
+          id=""
+          value="360"
+          class="loanLength"
+        />
+        30yr
+      </div>
+
+      <div>
+        <p>Your expected monthly payment is: <strong id="expected"></strong></p>
+      </div>
+    </div>
+
+    <script src="./index.ts" type="module"></script>
+  </body>
+</html>

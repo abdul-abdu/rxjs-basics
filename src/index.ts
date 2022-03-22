@@ -8,4 +8,5 @@ import "./index.css"
 // import './throttleTime'
 // import "./sampleTime"
 // import "./fleattening"
-import './mergeMap'
+// import './mergeMap'
+import './forkJoin'
